@@ -64,14 +64,14 @@ To get a local copy of this project up and running, follow these steps:
 
    ```bash
    cd server
-   npm start
+   npm run dev
    ```
 
 6. Start the client:
 
    ```bash
    cd client
-   npm start
+   npm run dev
    ```
 
 7. Open your browser and access the application at `http://localhost:3000` for the server side and `http://localhost:5173/` for the client side.
