@@ -8,6 +8,11 @@ const app = express();
 app.use(cors());
 app.use(morgan("combined"));
 
+//Routes
+app.get("/", (req, res) => {
+  res.json("Hello world");
+});
+
 //Running the server
 
 const PORT = process.env.PORT || 3000;
