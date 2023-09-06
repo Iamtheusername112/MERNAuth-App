@@ -2,7 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./db");
-
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
 const app = express();
 
 require("dotenv").config();
@@ -16,10 +17,9 @@ app.use(cors());
 app.use(morgan("combined"));
 
 //Routes
-app.get("/", (req, res) => {
-  res.json("Hello world");
-});
-
+app.get("/api/user", userRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
 //Running the server
 
 const PORT = process.env.PORT || 3000;
