@@ -1,3 +1,4 @@
+/* Base styles */
 .login_container {
   width: 100%;
   min-height: 100vh;
@@ -5,43 +6,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column; /* Center content vertically on smaller screens */
 }
 
 .login_form_container {
-  width: 900px;
-  height: 500px;
+  width: 100%;
+  max-width: 900px; /* Adjust to your desired maximum width */
+  height: auto;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row on smaller screens */
   border-radius: 10px;
   box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
     0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
 .left {
-  flex: 2;
+  flex: 1; /* Take up full width on smaller screens */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: white;
   border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 10px;
+  padding: 20px; /* Add some spacing for better mobile display */
 }
 
 .form_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  width: 100%; /* Take up full width */
+  max-width: 400px; /* Limit width for larger screens */
 }
 
 .form_container h1 {
-  font-size: 40px;
+  font-size: 30px; /* Reduce font size for smaller screens */
   margin-top: 0;
 }
 
 .input {
   outline: none;
   border: none;
-  width: 370px;
+  width: 100%;
   padding: 15px;
   border-radius: 10px;
   background-color: #edf5f3;
@@ -50,7 +60,7 @@
 }
 
 .error_msg {
-  width: 370px;
+  width: 100%;
   padding: 15px;
   margin: 5px 0;
   font-size: 14px;
@@ -61,38 +71,59 @@
 }
 
 .right {
-  flex: 1;
+  flex: 1; /* Take up full width on smaller screens */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #3bb19b;
+  border-top-left-radius: 0;
   border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 0;
+  padding: 20px; /* Add some spacing for better mobile display */
 }
 
 .right h1 {
   margin-top: 0;
   color: white;
-  font-size: 40px;
+  font-size: 30px; /* Reduce font size for smaller screens */
   align-self: center;
 }
 
+/* Button styles */
 .white_btn,
 .green_btn {
   border: none;
   outline: none;
   padding: 12px 0;
-  background-color: white;
   border-radius: 20px;
   width: 180px;
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .green_btn {
   background-color: #3bb19b;
   color: white;
   margin: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .login_form_container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    border-radius: 0;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
 }
