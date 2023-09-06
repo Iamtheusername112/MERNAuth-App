@@ -44,3 +44,23 @@
     margin-right: 10px;
   }
 }
+
+.gif_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 80vh;
+}
+
+.gif {
+  max-width: 90%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.p_below {
+  margin-top: 10px;
+  font-size: 16px;
+}
