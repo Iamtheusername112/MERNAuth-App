@@ -103,3 +103,12 @@ MERNAuth/
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or pull requests for any improvements or bug fixes.
+
+## Contact
+
+Have questions or feedback? Feel free to reach out:
+
+Name: Francis Iwu
+Email: [iwufrancischisom20@gmail.com]
+LinkedIn: [https://www.linkedin.com/in/francis-iwu-878973238/]
+Portfolio: [https://iwusportfolio.netlify.app/]
